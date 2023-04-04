@@ -80,21 +80,21 @@ public class AirportController {
 
         //Calculate the total number of people who have flights on that day on a particular airport
         //This includes both the people who have come for a flight and who have landed on an airport after their flight
-        Airport airport = airportDb.get(airportName);
-        if(Objects.isNull(airport)){
-            return 0;
-        }
-        City city = airport.getCity();
-        int count = 0;
-        for(Flight flight:flightDb.values()){
-            if(date.equals(flight.getFlightDate()))
-                if(flight.getToCity().equals(city)||flight.getFromCity().equals(city)){
-
-                    int flightId = flight.getFlightId();
-                    count = count + flightToPassengerDb.get(flightId).size();
-                }
-        }
-        return count;
+//        Airport airport = airportDb.get(airportName);
+//        if(Objects.isNull(airport)){
+//            return 0;
+//        }
+//        City city = airport.getCity();
+//        int count = 0;
+//        for(Flight flight:flightDb.values()){
+//            if(date.equals(flight.getFlightDate()))
+//                if(flight.getToCity().equals(city)||flight.getFromCity().equals(city)){
+//
+//                    int flightId = flight.getFlightId();
+//                    count = count + flightToPassengerDb.get(flightId).size();
+//                }
+//        }
+//        return count;
     }
 
     @GetMapping("/calculate-fare")
