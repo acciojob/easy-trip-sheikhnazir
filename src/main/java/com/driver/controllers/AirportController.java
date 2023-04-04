@@ -94,7 +94,7 @@ public class AirportController {
 //                    count = count + flightToPassengerDb.get(flightId).size();
 //                }
 //        }
-//        return count;
+      return 0;
     }
 
     @GetMapping("/calculate-fare")
